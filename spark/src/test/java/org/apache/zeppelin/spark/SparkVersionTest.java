@@ -43,6 +43,8 @@ public class SparkVersionTest {
     assertEquals(SparkVersion.SPARK_1_2_0, SparkVersion.fromVersionString("1.2.0"));
     assertEquals(SparkVersion.SPARK_1_5_0, SparkVersion.fromVersionString("1.5.0-SNAPSHOT"));
     assertEquals(SparkVersion.SPARK_1_5_0, SparkVersion.fromVersionString("1.5.0-SNAPSHOT"));
+    assertEquals(SparkVersion.SPARK_2_1_0, SparkVersion.fromVersionString("2.1.0-SNAPSHOT"));
+    assertFalse(SparkVersion.fromVersionString("2.1.0-SNAPSHOT").isUnsupportedVersion());
     // test spark2 version of HDP 2.5
     assertEquals(SparkVersion.SPARK_2_0_0, SparkVersion.fromVersionString("2.0.0.2.5.0.0-1245"));
 
